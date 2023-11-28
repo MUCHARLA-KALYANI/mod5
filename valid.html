@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="col-ls-4 card m-auto mt-5 ">
+            <div class="card-body">
+                <form action="" onsubmit="return fn()">
+                <div class="form-group">
+                    <label class = "form-label">Full name</label> <span class="text-danger" id="name"></span>
+                    <input type="text" class = "form-control" id ="validName">
+                </div>
+                <div class="form-group">
+                    <label class = "form-label">Mobile Number</label> <span class="text-danger" id="mobile"></span>
+                    <input type="text" class = "form-control" id = "validNumber">
+                </div>
+                <div class="form-group">
+                    <label class = "form-label">Email</label> <span class="text-danger" id="email"></span>
+                    <input type="email" class = "form-control" id = "validEmail">
+                </div>
+                <div class="form-group">
+                    <label class = "form-label">Password</label> <span class="text-danger" id="pass"></span>
+                    <input type="password" class = "form-control" id = "validPassword">
+                </div>
+             
+                <div class="form-group" mt-2>
+                    <input class="btn btn-primary " type="submit" value="Register">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="registration.js"></script>
+  </body>
+</html>

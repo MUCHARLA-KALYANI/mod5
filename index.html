@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<style>
+    .form-signup{
+        margin: 0 auto;
+        max-width: 400px;
+    }
+    body{
+        padding-top: 100px;
+        background: powderblue;
+    }
+    .form-signup h2{
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <form action="" class="form-signup needs-validation">
+            <h2 >Register</h2>
+            <p>Create your account it,s free only take a minute.</p>
+               <div class="form-group">
+                <div class="row">
+                <div class="col-md-6">
+                        <label for="">FIRSTNAME</label><br>
+                        <input type="text" name="firstname" class="form-control" placeholder="First Name" required>
+                        <div class="invalid-feedback">
+                            please enter valid name
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="">LASTNAME</label> <br>
+                        <input type="text" name="lastname" class="form-control" placeholder="Last Name" required>
+                        <div class="invalid-feedback">
+                            please enter valid name
+                        </div>
+                    </div>
+                </div>
+                </div>
+               <div class="form-group">
+                 <label for="">EMAIL</label><br>
+                <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                <div class="invalid-feedback">
+                    please enter valid email
+                </div>
+               </div>
+               <div class="form-group">
+                <label for="">password</label><br>
+                <input type="password" name="password" class="form-control" placeholder="password" required pattern="[A-Z][a-b][0-9]{8,}" title="password must be 8 character long">
+                <div class="invalid-feedback">
+                    password must be 8 characters long
+                </div>
+               </div>
+               <div class="form-group">
+                <label for="">Confirm_password</label> <br>
+                <input type="repassword" name="confirm_password" class="form-control" placeholder="Confirm Password">
+               </div>
+               <div class="form-group">
+                <label for="">MOBILE</label><br>
+                <input type="text" name="Mobile Number" class="form-control" placeholder="Mobile" required pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number">
+               </div>
+               <div class="form-group">
+                <label for="">
+                    <input type="checkbox" name="" id="">
+                    I accept the <a href="#">Terms of use</a>& <a href="#">Privacy policy</a>
+                </label>
+                
+               </div>
+               <input type="submit"  class="btn btn-success form-control" name="" value="Submit">
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

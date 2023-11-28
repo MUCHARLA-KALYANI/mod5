@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetData</title>
+</head>
+<body>
+    <table class="table" border="1">
+     <thead>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>ADRESS</th>
+        <th>PHONE</th>
+        <th>WEBSITE</th>
+        <th>COMPANY</th>
+     </thead>
+     <tbody id="table-body">
+     </tbody>
+    </table>
+    <button id="getDataBtn">GET USER DATA</button>
+    <script>
+        document.getElementById('getDataBtn').addEventListener('click',() => {
+            fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response=>response.json())
+             .then(data =>{
+                const tableBody = document.getElementById('table-body');
+                tableBody.innerHTML='';
+                data.forEach(user=>{
+                    const row = document.createElement('tr');
+                    row.innerHTML=`
+                    <td> ${user.id}</td>
+                    <td> ${user.name}</td>
+                    <td> ${user.email}</td>
+                    <td> ${user.address.city},${user.address.street},${user.address.suite}</td>
+                    <td> ${user.phone}</td>
+                    <td> ${user.website}</td>
+                    <td> ${user.company}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+             })
+             .catch(error => {
+                console.log("Error fetching data:",error);
+             });
+        });
+    </script>
+</body>
+</html>

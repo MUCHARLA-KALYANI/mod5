@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        margin: 0;
+        }
+        header{
+            display: grid;
+            grid-template-columns: 1fr auto;
+            background-color: #333;
+            padding: 5px;
+            color: white;
+        }
+        nav{
+            display: grid;
+            grid-template-columns: repeat(4,auto);
+            gap: 20px;
+        }
+        nav a{
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover{
+            color: pink;
+            background-color: aquamarine;
+            width: fit-content;
+            height: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LOGO</h1>
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">MENU</a>
+            <a href="#">CONTACT US</a>
+        </nav>
+    </header>
+</body>
+</html>
